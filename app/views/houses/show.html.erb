@@ -1,8 +1,13 @@
 <div>
   <%- @house.members.each do |user| -%>
     <%= user.name -%>
-    <%- user.investments.each do |investment| -%>
-      <%= investment.amount -%>
-    <%- end -%>
+    <%= @house.percent_ownership(user) =%>
+    <ol>
+      <%- @house.investments.by_user(user).each do |investment| -%>
+        <li>
+          <%= investment.amount -%>
+        <li>
+      <%- end -%>
+    </ol>
   <%- end -%>
 </div>
