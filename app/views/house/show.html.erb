@@ -1,5 +1,8 @@
 <div>
-  <%- house.members.each do |user| -%>
+  <%- @house.members.each do |user| -%>
     <%= user.name -%>
+    <%- user.investments.each do |investment| -%>
+      <%= investment.amount -%>
+    <%- end -%>
   <%- end -%>
 </div>
