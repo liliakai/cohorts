@@ -9,6 +9,7 @@ class House < ActiveRecord::Base
   end
 
   def percent_ownership(user)
-    investments.where(:user_id => user.id).all.sum.to_f / total_invested
+    user_investments = investments.where(:user_id => user.id).all.map(&:amount)
+    user_investments.sum.to_f / total_invested
   end
 end
