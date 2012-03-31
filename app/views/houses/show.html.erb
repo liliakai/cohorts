@@ -5,8 +5,8 @@
     <ol>
       <%- @house.investments.by_user(user).each do |investment| -%>
         <li>
-        <%= investment.amount -%>
-        <%= investment.limited_equity -%>
+          <div><%= investment.amount -%></div>
+          <div><%= investment.limited_equity -%></div>
         </li>
       <%- end -%>
     </ol>
