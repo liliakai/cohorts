@@ -14,7 +14,7 @@ class Investment < ActiveRecord::Base
 
   def inflation_rate(num_years)
     time = created_at + (num_years).years
-    percent_change cpi(time_start), cpi(time + 1.year)
+    percent_change cpi(time), cpi(time + 1.year)
   end
 
   def percent_change(val1, val2)
