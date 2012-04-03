@@ -11,7 +11,7 @@
       <%= f.hidden_field :house_id, :value => @house.id -%>
       <%= f.hidden_field :user_id, :value => user.id -%>
       <%= f.text_field :amount -%>
-      <%= f.submit_tag -%>
+      <%= f.submit -%>
     <%- end -%>
   <%- end -%>
 </div>
@@ -23,6 +23,6 @@
   </ol>
   <%= form_for :expense do |f| -%>
     <%= f.text_field :amount -%>
-      <%= f.submit_tag -%>
+      <%= f.submit -%>
   <%- end -%>
 </div>
