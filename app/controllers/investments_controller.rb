@@ -4,4 +4,9 @@ class InvestmentsController < ApplicationController
     investment = Investment.create! params[:investment]
     redirect_to house_path(investment.house)
   end
+
+  def destroy
+    investment = Investment.find params[:id]
+    expense.destroy
+  end
 end
