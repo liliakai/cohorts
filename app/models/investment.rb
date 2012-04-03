@@ -5,9 +5,9 @@ class Investment < ActiveRecord::Base
   scope :by_user, lambda {|user| {:conditions => {:user_id => user.id}}}
   scope :in_house, lambda {|house| {:conditions => {:house_id => house.id}}}
 
-  def limited_equity
+  def inflated_amount
     years = Time.now.year - created_at.year
-    0..years.inject(amount) do |total, year_number|
+    (0..years).inject(amount) do |total, year_number|
       total * (1.0 + inflation_rate(year_number))
     end
   end
