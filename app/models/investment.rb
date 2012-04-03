@@ -22,7 +22,7 @@ class Investment < ActiveRecord::Base
     0.04
   end
 
-  def cpi(time_start, time_end)
+  def cpi(time_start)
     # todo
     100
   end
