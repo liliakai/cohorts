@@ -3,6 +3,6 @@
   <div><%= expense.amount -%></div>
   <%= form_for expense, :method => :delete do |f| -%>
     <%= f.hidden_field :id -%>
-    <%= f.submit -%>
+    <%= f.submit "Delete" -%>
   <%- end -%>
 </li>
