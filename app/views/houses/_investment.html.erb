@@ -1,5 +1,5 @@
 <li>
   <div><%= investment.created_at -%></div>
-  <div><%= investment.amount -%></div>
-  <div><%= investment.inflated_amount -%></div>
+  <div><%= dollarize(investment.amount) -%></div>
+  <div><%= dollarize(investment.inflated_amount) -%></div>
 </li>

@@ -7,6 +7,12 @@
       <%= render :partial => 'houses/investment',
         :collection => @house.investments.by_user(user) -%>
     </ol>
+    <%= form_for :investment do |f| -%>
+      <%= f.hidden_field :house_id, :value => @house.id -%>
+      <%= f.hidden_field :user_id, :value => user.id -%>
+      <%= f.text_field :amount -%>
+      <%= f.submit_tag -%>
+    <%- end -%>
   <%- end -%>
 </div>
 <div>
@@ -15,4 +21,8 @@
     <%= render :partial => 'houses/expense',
       :collection => @house.expenses -%>
   </ol>
+  <%= form_for :expense do |f| -%>
+    <%= f.text_field :amount -%>
+      <%= f.submit_tag -%>
+  <%- end -%>
 </div>
