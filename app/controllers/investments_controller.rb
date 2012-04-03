@@ -7,6 +7,6 @@ class InvestmentsController < ApplicationController
 
   def destroy
     investment = Investment.find params[:id]
-    expense.destroy
+    investment.destroy
   end
 end
