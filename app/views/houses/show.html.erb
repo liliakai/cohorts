@@ -4,7 +4,7 @@
     <%= user.name -%>
     <%= @house.percent_ownership(user) =%>
     <ol>
-      <%= render 'houses/investment',
+      <%= render :partial => 'houses/investment',
         :collection => @house.investments.by_user(user) -%>
     </ol>
   <%- end -%>
@@ -12,6 +12,7 @@
 <div>
   <h1>Expenses</h1>
   <ol>
-    <%= render 'houses/expense', :collection => @house.expenses -%>
+    <%= render :partial => 'houses/expense',
+      :collection => @house.expenses -%>
   </ol>
 </div>
