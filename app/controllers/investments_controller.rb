@@ -8,5 +8,6 @@ class InvestmentsController < ApplicationController
   def destroy
     investment = Investment.find params[:id]
     investment.destroy
+    redirect_to house_path(investment.house)
   end
 end

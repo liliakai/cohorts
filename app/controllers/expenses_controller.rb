@@ -8,5 +8,6 @@ class ExpensesController < ApplicationController
   def destroy
     expense = Expense.find params[:id]
     expense.destroy
+    redirect_to house_path(expense.house)
   end
 end
