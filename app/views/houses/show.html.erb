@@ -25,7 +25,10 @@
   <%= form_for :expense,
     :url => { :controller => :expenses, :action => :create } do |f| -%>
       <%= f.hidden_field :house_id, :value => @house.id -%>
+      <%= f.label :amount -%>
       <%= f.text_field :amount -%>
+      <%= f.label :name -%>
+      <%= f.text_field :name -%>
       <%= f.submit -%>
   <%- end -%>
 </div>
