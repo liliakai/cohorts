@@ -18,8 +18,8 @@ body {
       display: inline-block;
       padding: 5px
     }
+    a { float: right; }
   }
   .date { width: 200px }
   .name, .amount { width: 100px; }
-  .current { display: none; }
 }
