@@ -2,21 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body
+body {
   background:
-    color: #666
+    color: #666;
   font:
-    family: sans-serif
-    size: 13px
+    family: sans-serif;
+    size: 13px;
+  }
 
-#ledger
-  li
-    border: 1px solid #333
-  .date, .name
-    width: 100px
-  .amount
-    width: 50px
-    .current
-      display: none
-
-
+#ledger {
+  li { border: 1px solid #333; }
+  .date, .name { width: 100px }
+  .amount { width: 50px; }
+  .current { display: none; }
+}
