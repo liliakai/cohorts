@@ -1,9 +1,9 @@
 <li>
-  <span><%= investment.created_at -%></span>
-  <span><%= investment.amount -%></span>
-  <span><%= investment.inflated_amount -%></span>
-  <%= form_for investment, :method => :delete do |f| -%>
-    <%= f.hidden_field :id -%>
-    <%= f.submit "Delete" -%>
-  <%- end -%>
+  <span class="date"><%= investment.created_at -%></span>
+  <span class="name"><%= investment.user.name -%></span>
+  <span class="amount">
+    <span class="original"><%= investment.amount -%></span>
+    <span class="current"><%= investment.inflated_amount -%></span>
+  </span>
+  <%= link_to "Delete", investement_url(investment), :method => :delete -%>
 </li>

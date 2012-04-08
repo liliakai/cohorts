@@ -1,9 +1,9 @@
 <div>
   <h1>Ledger</h1>
-  <ol>
+  <ul id='ledger'>
     <%= render :partial => 'houses/investment',
       :collection => @house.investments -%>
-  </ol>
+  </ul>
   <%= form_for :investment,
     :url => { :controller => :investments, :action => :create } do |f| -%>
     <%= f.hidden_field :house_id, :value => @house.id -%>
