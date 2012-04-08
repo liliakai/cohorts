@@ -1,6 +1,8 @@
 class HousesController < ApplicationController
+  before_filter :set_house
 
-  def show
+  def set_house
     @house = House.find(params[:id])
   end
+
 end
