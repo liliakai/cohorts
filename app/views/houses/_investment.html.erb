@@ -2,8 +2,8 @@
   <span class="date"><%= investment.created_at -%></span>
   <span class="name"><%= investment.user.name -%></span>
   <span class="amount">
-    <span class="original"><%= investment.amount -%></span>
-    <span class="current"><%= investment.inflated_amount -%></span>
+    <p class="original"><%= investment.amount -%></p>
+    <p class="current"><%= investment.inflated_amount -%></p>
   </span>
   <%= link_to "Delete", investment_url(investment), :method => :delete -%>
 </li>
