@@ -3,16 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  width: 600px;
   background-color: #666;
   font: {
-    family: sans-serif;
+    family: "Helvetica", sans-serif;
     size: 13px;
   }
 }
 
 #ledger {
-  li { border: 1px solid #333; }
-  .date, .name { width: 100px }
-  .amount { width: 50px; }
+  li {
+    border: {
+      style: solid;
+      width: 1px;
+      color: #333;
+      left: none;
+      right: none;
+    }
+    span { display: inline-block; }
+  }
+  .date { width: 200px }
+  .name, .amount { width: 100px; }
   .current { display: none; }
 }
