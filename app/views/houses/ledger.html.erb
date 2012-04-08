@@ -7,8 +7,8 @@
   <%= form_for :investment,
     :url => { :controller => :investments, :action => :create } do |f| -%>
     <%= f.hidden_field :house_id, :value => @house.id -%>
-    <%= text_field_tag :user_name, :value => user.name -%>
-    <%= f.hidden_field :user_id, :value => user.id -%>
+    <%= text_field_tag :user_name -%>
+    <%= f.hidden_field :user_id -%>
     <%= f.text_field :amount -%>
     <%= f.submit -%>
   <%- end -%>
