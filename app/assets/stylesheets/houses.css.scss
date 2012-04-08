@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background:
-    color: #666;
-  font:
+  background-color: #666;
+  font: {
     family: sans-serif;
     size: 13px;
   }
+}
 
 #ledger {
   li { border: 1px solid #333; }
