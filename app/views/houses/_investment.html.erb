@@ -2,7 +2,7 @@
   <span class="date"><%= investment.created_at -%></span>
   <span class="name"><%= investment.user.name -%></span>
   <span class="amount"><%= investment.amount -%></span>
-  <span>
+  <span class="links">
     <%= link_to "Delete", investment_url(investment), :method => :delete -%>
   </span>
 </li>
