@@ -14,12 +14,10 @@ body {
 #ledger {
   li {
     border-bottom: solid 1px #333;
-    span {
-      display: inline-block;
-      padding: 5px
-    }
+    padding: 5px
     a { float: right; }
+    span { display: inline-block; }
+    .date { width: 200px }
+    .name, .amount { width: 100px; }
   }
-  .date { width: 200px }
-  .name, .amount { width: 100px; }
 }
