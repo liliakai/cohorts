@@ -1,8 +1,11 @@
 class House < ActiveRecord::Base
+  has_many :expenses
   has_many :transactions, :as => :to
   has_many :investments, :as => :to
-  has_many :shareholders, :through => :investments, :source => :from
-  has_many :expenses
+
+  def shareholders
+    investments.map(&:from)
+  end
 
   def total_invested
     transactions.map(&:amount).sum
