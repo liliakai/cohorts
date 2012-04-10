@@ -1,8 +1,7 @@
 class House < ActiveRecord::Base
-  has_many :memberships
-  has_many :members, :through => :memberships, :source => :user
   has_many :transactions, :as => :to
   has_many :investments, :as => :to
+  has_many :shareholders, :through => :investments, :source => :from
   has_many :expenses
 
   def total_invested
