@@ -1,14 +1,14 @@
 <div>
-  <h1>Investments</h1>
+  <h1>Transactions</h1>
   <%- @house.members.each do |user| -%>
     <%= user.name -%>
     <%= @house.percent_ownership(user) =%>
     <ol>
-      <%= render :partial => 'houses/investment',
-        :collection => @house.investments.by_user(user) -%>
+      <%= render :partial => 'houses/transaction',
+        :collection => @house.transactions.by_user(user) -%>
     </ol>
-    <%= form_for :investment,
-      :url => { :controller => :investments, :action => :create } do |f| -%>
+    <%= form_for :transaction,
+      :url => { :controller => :transactions, :action => :create } do |f| -%>
       <%= f.hidden_field :house_id, :value => @house.id -%>
       <%= f.hidden_field :user_id, :value => user.id -%>
       <%= f.text_field :amount -%>

@@ -1,11 +1,11 @@
 <div>
   <h1>Ledger</h1>
   <ul id='ledger'>
-    <%= render :partial => 'houses/investment',
-      :collection => @house.investments -%>
+    <%= render :partial => 'houses/transaction',
+      :collection => @house.transactions -%>
   </ul>
-  <%= form_for :investment,
-    :url => { :controller => :investments, :action => :create } do |f| -%>
+  <%= form_for :transaction,
+    :url => { :controller => :transactions, :action => :create } do |f| -%>
     <%= f.hidden_field :house_id, :value => @house.id -%>
     <%= f.label :user, "Name" -%>
     <%= text_field_tag :user_name -%>

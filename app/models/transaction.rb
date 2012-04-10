@@ -1,4 +1,4 @@
-class Investment < ActiveRecord::Base
+class Transaction < ActiveRecord::Base
   belongs_to :user
   belongs_to :house
 
