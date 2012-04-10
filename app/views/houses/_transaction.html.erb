@@ -1,6 +1,6 @@
 <li>
   <span class="date"><%= transaction.created_at -%></span>
-  <span class="name"><%= transaction.user.name -%></span>
+  <span class="name"><%= transaction.from.name -%></span>
   <span class="amount"><%= transaction.amount -%></span>
   <span class="links">
     <%= link_to "Delete", transaction_url(transaction), :method => :delete -%>
